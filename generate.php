@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$API_KEY = "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";
+$API_KEY = getenv("HF_API_KEY");
 $MODEL = "stabilityai/stable-diffusion-xl-base-1.0";
 
 $input = json_decode(file_get_contents("php://input"), true);
